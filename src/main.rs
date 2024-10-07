@@ -465,4 +465,145 @@
 
 
 
+// Remove something to make it work
+// Don't remove a whole line !
+// fn main() {
+//     let s = String::from("hello");
 
+//     let ref  r1 =  s;
+//     let ref r2 =  s;
+
+//     println!("{}, {}", r1, r2);
+
+//     println!("Success!");
+// }
+
+
+// fn main() {
+//     // Fix error by modifying this line
+//     let mut s = String::from("hello, ");
+
+//     borrow_object(&mut s);
+
+//     println!("Success!");
+// }
+
+// fn borrow_object(s: &mut String) {}
+
+
+
+
+
+// // This code has no errors!
+// fn main() {
+//     let mut s = String::from("hello, ");
+
+//     borrow_object(&s);
+    
+//     s.push_str("world");
+
+//     println!("{}",s);
+// }
+
+// fn borrow_object(s: &String) {
+//     println!("{}",*s);
+// }
+
+
+// // Comment one line to make it work
+// fn main() {
+//     let mut s = String::from("hello, ");
+
+//     let r1 = &mut s;
+//     r1.push_str("world");
+//     let r2 = &mut s;
+//     r2.push_str("!");
+    
+//     println!("{}",r2);
+// }
+
+
+// fn main() {
+//     let mut s = String::from("hello, ");
+
+//     let r1 = &mut s;
+//     let r2 = &mut s;
+
+//     let lin:usize=r1.len();
+
+//     // Add one line below to make a compiler error: cannot borrow `s` as mutable more than once at a time
+//     // You can't use r1 and r2 at the same time
+// }
+
+
+
+
+// // Fix error without adding new line
+// fn main() {
+//     let s:  &str = "hello, world";
+
+//     println!("Success!");
+// }
+
+
+
+/*
+
+// Fix the error with at least two solutions
+fn main() {
+    let s: &str = "hello, world".into();
+    greetings( s)
+}
+
+fn greetings(s: &str) {
+    println!("{}",s)
+}
+
+
+
+// Fix the error with at least two solutions
+fn main() {
+    let s: Box<str> = "hello, world".into();
+    greetings( &s)
+}
+
+fn greetings(s: &str) {
+    println!("{}",s)
+}
+
+
+
+
+
+
+
+// Fill the blank
+fn main() {
+    let mut s = String::from("");
+    s.push_str("hello, world");
+    s.push('!');
+
+    assert_eq!(s, "hello, world!");
+
+    println!("Success!");
+}
+
+
+
+
+
+
+
+*/
+
+
+
+
+// Fix errors without removing any line
+fn main() {
+    let s1 = String::from("hello,");
+    let s2 = String::from("world!");
+    let s3 = s1 + s2.as_str(); 
+    assert_eq!(s3, "hello,world!");
+    println!("{}", s3);
+}
